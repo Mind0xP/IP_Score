@@ -47,7 +47,7 @@ def get_ips_csv(filename):
 
 def write_csv(filename, data):
     try:
-        with open(filename, 'w') as f:
+        with open(filename, 'w', newline='') as f:
             fieldnames = ['ip', 'score']
             w = csv.DictWriter(f, fieldnames=fieldnames)
             w.writeheader()
